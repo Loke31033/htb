@@ -1,0 +1,53 @@
+FLAG CAPTURE REPORT
+===================
+
+Target: HTB Meow Machine (10.129.64.121)
+Date: January 29, 2026
+Time: 21:14 IST
+
+FLAG INFORMATION:
+----------------
+Flag Value: D40abdfe23665766f9c61ecba8a4c19
+Location: /root/flag.txt
+Access Method: Direct Telnet connection
+Privileges: root
+
+COMMANDS EXECUTED:
+------------------
+1. telnet 10.129.64.121
+2. find / -name "*flag*" 2>/dev/null
+3. cat /root/flag.txt
+
+FLAG VERIFICATION:
+------------------
+MD5 Hash: 88b4260b8d66b6a2d310f6098d8c5a3c
+Flag Format: 32 character hexadecimal
+Valid: ✓ Yes
+
+SYSTEM INFORMATION AT TIME OF CAPTURE:
+--------------------------------------
+- Operating System: Ubuntu
+- Kernel Version: Linux 4.15-5.19
+- Disk Usage: 41.7% of 7.75GB
+- Memory Usage: 4%
+- Security Updates: 31 available
+
+EVIDENCE SCREENSHOTS:
+---------------------
+1. nmap_scan.png - Initial reconnaissance
+2. telnet_access.png - Successful connection
+3. flag_capture.png - Flag extraction
+
+TIMELINE:
+---------
+20:56 - Nmap scan initiated
+20:57 - Telnet service identified
+21:03 - Connection attempts began
+21:05 - Root access obtained
+21:14 - Flag captured
+21:15 - Assessment completed
+
+TOTAL TIME: ~19 minutes
+
+REPORTED BY: Lokeshwar
+STATUS: COMPLETED

@@ -1,0 +1,64 @@
+==========================================
+NMAP SCAN RESULTS - HTB Meow Machine
+Target: 10.129.64.121
+Date: January 29, 2026
+Time: 20:56 IST
+==========================================
+
+COMMAND EXECUTED:
+sudo nmap -A -T4 10.129.64.121
+
+SCAN RESULTS:
+Starting Nmap 7.95 (https://nmap.org) at 2026-01-29 20:56 IST
+Nmap scan report for 10.129.64.121
+Host is up (0.67s latency).
+Not shown: 999 closed tcp ports (reset)
+
+PORT   STATE SERVICE VERSION
+23/tcp open  telnet  Linux telnetd
+Device type: general purpose
+Running: Linux 4.X|5.X
+OS CPE: cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:5
+OS details: Linux 4.15-5.19
+Network Distance: 2 hops
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 3306/tcp)
+HOP RTT      ADDRESS
+1   649.96 ms 10.10.16.1
+2   377.29 ms 10.129.64.121
+
+OS and Service detection performed. Please report any incorrect results.
+
+==========================================
+ANALYSIS:
+==========================================
+1. SINGLE PORT OPEN: Only port 23 (Telnet) is accessible
+2. SERVICE: Telnet (unencrypted remote access protocol)
+3. VERSION: Linux telnetd
+4. OS: Linux kernel 4.15-5.19 (likely Ubuntu)
+5. SECURITY RISK: HIGH - Telnet transmits data in plaintext
+
+==========================================
+RECOMMENDED EXPLOITATION PATH:
+==========================================
+1. Attempt Telnet connection without credentials
+2. Try common default credentials
+3. Check for command injection vulnerabilities
+4. Look for misconfigured permissions
+
+==========================================
+VULNERABILITY ASSESSMENT:
+==========================================
+CRITICAL FINDINGS:
+- Telnet service exposed without encryption
+- Potential for credential interception
+- Default configuration may lack authentication
+
+EXPLOITATION POTENTIAL: HIGH
+DIFFICULTY: VERY EASY
+IMPACT: COMPLETE SYSTEM ACCESS
+
+==========================================
+END OF REPORT
+==========================================
